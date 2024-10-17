@@ -1,0 +1,25 @@
+Package: berdata
+Title: R wrapper for BER API
+Version: 0.1.2
+Authors@R: 
+    c(person(given = "Hanjo",
+           family = "Odendaal",
+           role = c("aut", "cre"),
+           email = "hanjo@sun.ac.za",
+           comment = c(ORCID = "0000-0003-1172-0444"))
+    )
+Description: Data wrapper around the BER API.
+Depends: R (>= 4.0.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr
+Imports: 
+    dplyr,
+    glue,
+    httr,
+    jsonlite,
+    logger,
+    lubridate
