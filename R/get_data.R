@@ -63,7 +63,7 @@ get_data <- function(time_series_code,
 
   if(output_format == "names"){
     out <- timeseriescode %>%
-      set_names(c("date", codedescriptions$description))
+      set_names(c("date", codedescriptions$description[match(colnames(timeseriescode)[-1], codedescriptions$timeseries_code)]))
   }
   
   if(output_format == "nested"){
