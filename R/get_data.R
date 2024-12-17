@@ -30,7 +30,7 @@ get_data <- function(time_series_code,
   
   timeseriescode <- POST(glue("{url}/timeseriescode"), body = toJSON(payload)) 
   
-  if(status_code(timeseriescode) == 404){
+  if(status_code(timeseriescode) == 404 || status_code(timeseriescode) == 500){
     
     out <- timeseriescode %>% 
       content
